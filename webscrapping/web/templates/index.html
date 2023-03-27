@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>GOLD RATES</title>
+<style>
+h1{
+	color:DarkGoldenRod;
+	font-size:30px
+	}
+h3{
+	background-image: linear-gradient(dodgerblue,Lemonchiffon)
+	}
+</style>
+</head>
+<body>
+<h1><center><b>TODAY GOLD RATES</b></center></h1>
+
+<h3 style="font-size:20px"><center><i>HERE YOU CAN CHECK ALL REGION GOLD RATES HERE</i></center></h3>
+<br><br>
+<center><a href="{% url 'golds' %}"><button style="color:crimson; font-size:20px">click here to get all states gold rates</button></a></center>
+<table style="width: 100%;  height: 100%;">
+	<tr>
+		<td>City</td>
+		<td>24 Carat Gold Rates(10 Grams)</td>
+		<td>22 Carat Gold Rates(10 Grams)</td>
+	</tr>
+	<tr>
+		<td>
+			{% for k in l1 %}
+			
+				{{ k }}
+				<br><br>
+			{% endfor %}
+		</td>
+		<td>
+			{% for l in l2 %}
+			
+				{{ l }}
+				<br><br>
+			{% endfor %}
+		</td>
+		<td>
+			{% for m in l3 %}
+			
+				{{ m }}
+				<br><br>
+			{% endfor %}
+		</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>JOB NOTIFICATIONS</title>
+<style>
+h1{
+	color:green;
+	font-size:30px
+	}
+h3{
+	background-image: linear-gradient(Pink,DarkSalmon)
+	}
+</style>
+</head>
+<body>
+<h1><center><b>CHECK RECENT JOB NOTIFICATIONS</b></center></h1>
+<h3 style="font-size:20px"><center><i>HERE YOU CAN CHECK ALL NEW JOB NOTIFICATIONS</i></center></h3>
+<br><br>
+<center><a href="{% url 'job' %}"<button style="color:blue; font-size:20px">click here to new cse job updates</button></a></center>
+{% for s in jo1 %}
+	{{ s }}<br>
+{% endfor %}
+</body>
+</html>
+

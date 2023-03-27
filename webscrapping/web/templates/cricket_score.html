@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>live score</title>
+<style>
+h1{
+	color:Darkblue;
+	font-size:30px
+	}
+h3{
+	background-image: linear-gradient(red,Lemonchiffon)
+	}
+</style>
+</head>
+<body>
+	
+<h1><center><b>WATCH LIVE CRICKET SCORE</b></center></h1>
+<h3 style="font-size:20px"><center><i>here you can go through all cricket matches live scores</i></center></h3>
+<br><br>
+<center><a href="{% url 'score' %}" <button style="color:DarkGreen; font-size:20px">click here to get cricket live score</button></a></center>
+<table>
+	<tr>
+		<td>Team score</td>
+		<td>Match Details</td>
+		<td>Match winner</td>
+	</tr>
+	<tr>
+		<td>
+			{% for n in c1 %}
+			
+				{{ n }}
+				<br><br>
+			{% endfor %}
+		</td>
+		<td>
+			{% for i in c2 %}
+			
+				{{ i }}
+				<br><br>
+			{% endfor %}
+		</td>
+		<td>
+			{% for j in c3 %}
+			
+				{{ j }}
+				<br><br>
+			{% endfor %}
+		</td>
+	</tr>
+</table>
+</body>
+</html>
